@@ -9,21 +9,41 @@
 // Додати туди ваше домашнє завдання
 // Вислати вашу гілку
 
-const prompt = require("prompt-sync")({ sigint: true });
+var userInput = prompt("Введіть кількість років: ", "0");
+var years = Number(userInput);
+var lastDigit = years % 10;
+var twoLastDigits = years % 100;
 
-var userInput = prompt("Input your age: ");
-const lastChar = userInput.toString().slice(-1);
-const twoLastChars = userInput.toString().slice(-2);
-if (userInput <= 0){
-    console.log("Please, enter a valid age")
-} else if (isNaN(userInput)){
-    console.log("Please, use digits only")
-} else if (twoLastChars >= 11 && twoLastChars <= 19){
-    console.log(userInput + " років");
-} else if (lastChar == 1){
-    console.log(userInput + " рік");
-} else if (lastChar >= 2 && lastChar <= 4){
-    console.log(userInput + " роки");
+if (isNaN(years)) {
+    console.log("Please, use digits only");
+} else if(years <= 0){
+    console.log("Please, enter a valid age");
 } else {
-    console.log(userInput + " років");
+    if (twoLastDigits >= 11 && twoLastDigits <= 19) {
+        console.log(years + " років");
+    } else if (lastDigit === 1) {
+        console.log(years + " рік");
+    } else if (lastDigit >= 2 && lastDigit <= 4) {
+        console.log(years + " роки");
+    } else {
+        console.log(years + " років");
+    }
 }
+
+// const prompt = require("prompt-sync")({ sigint: true });
+// var userInput = prompt("Input your age: ", "0");
+// const lastChar = userInput.toString().slice(-1);
+// const twoLastChars = userInput.toString().slice(-2);
+// if (userInput <= 0){
+//     console.log("Please, enter a valid age")
+// } else if (isNaN(userInput)){
+//     console.log("Please, use digits only")
+// } else if (twoLastChars >= 11 && twoLastChars <= 19){
+//     console.log(userInput + " років");
+// } else if (lastChar == 1){
+//     console.log(userInput + " рік");
+// } else if (lastChar >= 2 && lastChar <= 4){
+//     console.log(userInput + " роки");
+// } else {
+//     console.log(userInput + " років");
+// }

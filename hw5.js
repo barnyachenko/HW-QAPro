@@ -26,6 +26,24 @@ let drawTriangle = function(symbol, high){
 
 drawTriangle(symbol, high)
 
+let symbol2 = "+";
+let high2 = 6;
+let drawTriangle2 = function(symbol2, high2){
+    let i = 1;
+    while (i <= high2){
+        let j = 1;
+        let result4 = "";
+        while (j <= i) {
+            result4 += symbol2;
+            j++;
+        }
+        console.log(result4);
+        i++;
+    }
+}
+
+drawTriangle2(symbol2, high2);
+
 // ДЗ 2
 // Вивести на екран суму чисел від 1 до 100 включно, які не кратні 3.
 // Умови виконання ДЗ

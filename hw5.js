@@ -13,18 +13,18 @@
 // Не використовувати функції або інші матеріали які ми не вивчали
 
 let symbol = "-";
-let high = 10;
+let high = 6;
 let drawTriangle = function(symbol, high){
-    let result1 = "";
     for (let i = 1; i <= high; i++){
+        let result = "";
         for (let j = 1; j <= i; j++){
-            result1 += symbol;
+            result += symbol;
         }
-        console.log(result1);
+        console.log(result);
     }
 }
 
-drawTriangle(symbol, high)
+drawTriangle(symbol, high);
 
 let symbol2 = "+";
 let high2 = 6;

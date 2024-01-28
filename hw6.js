@@ -5,11 +5,18 @@
 // Намагайтесь робити ДЗ самостійно та не дивитися будь-які підказки
 // Не використовувати isNaN/ Number.isNaN
 
-let value = "abc"; 
-function myIsNaN(value){
-    return value !== value;
+let value = 0 
+function myIsNaN (value){
+    return value !== value || value === undefined
 }
-console.log(myIsNaN(value));
+
+console.log(myIsNaN(undefined))
+console.log(myIsNaN(NaN))
+console.log(myIsNaN('1'))
+console.log(myIsNaN(false))
+console.log(myIsNaN(true))
+console.log(myIsNaN(12))
+console.log(myIsNaN(null))
 
 // ДЗ 2
 // Перевірка теорії ймовірності. Напишіть функцію яка буде генерувати певну кількість випадкових чисел в діапазоні від 100 до 1000 включно. Порахувати кількість парних та непарних серед них. Обчислити відсоткове співвідношення - чи буде воно близьке до 50%50? Приклад функції checkProbabilityTheory(count). Параметр count буде вказувати скільки разів буде генеруватися випадкове число.

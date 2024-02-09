@@ -44,7 +44,7 @@ var trustedEmails = []
 var emailRegex = /^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)?@(gmail\.com|yahoo\.com)$/
 for (var i = 0; i < arr.length; i++){
     if (emailRegex.test(arr[i].email)){
-        trustedEmails.push(arr[i])
+        trustedEmails.push(arr[i].email)
     }
 }
 
